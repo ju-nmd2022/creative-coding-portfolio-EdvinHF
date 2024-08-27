@@ -18,7 +18,7 @@ function draw() {
 
   push();
   rotate(-frameCount / 10);
-  ellipse(75, 0, 50);
+  ellipse(190, 0, 300);
   pop();
 
   push();
