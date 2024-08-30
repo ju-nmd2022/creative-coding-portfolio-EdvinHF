@@ -1,17 +1,17 @@
 [
   {
-    "file": "experiments/example.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "file": "experiments/georgNees.js",
+    "name": "Schotter recreation",
+    "description": "recreation of of Georg Nees Schotter"
   },
   {
-    "file": "experiments/example.js",
-    "name": "1",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? What is the inspiration?"
+    "file": "experiments/georgNeesV2.js",
+    "name": "Schotter recreation variant 2",
+    "description": "Version of Georg Nees Schotter"
   },
   {
-    "file": "experiments/example.js",
-    "name": "2",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? What is the inspiration?"
+    "file": "experiments/georgNeesV3.js",
+    "name": "Schotter recreation variant 3",
+    "description": "Version of Georg Nees Schotter"
   }
 ]
