@@ -5,9 +5,9 @@ function setup() {
 const cols = 10;
 const rows = 15;
 const squareSize = 40;
-const c = color(255, 99, 71);
 
 function draw() {
+const c = color(255, 99, 71);
   strokeWeight(1);
   noFill();
   for (let y = 0; y < rows; y++) {
