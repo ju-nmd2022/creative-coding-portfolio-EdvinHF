@@ -20,7 +20,7 @@ function drawLayers(x, y, size, layers) {
   for (let i = exLayers; i > 0; i--) {
     const spacing = 2;
     const squareResizer = 10;
-    const layerSize = (size - (layers - i) * spacing) / squareResizer;
+    const layerSize = (size - (layers - i) * spacing) / 10;
 
     beginShape();
     vertex(
