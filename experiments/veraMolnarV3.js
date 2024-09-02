@@ -17,9 +17,11 @@ function drawLayers(x, y, size, layers) {
   strokeWeight(0.4);
   const exLayers = layers * layers;
 
-  for (let i = 0; i < exLayers; i++) {
-    const spacing = 1;
-    const layerSize = (size - i * spacing) / 2;
+  for (let i = exLayers; i > 0; i--) {
+    const spacing = 2;
+    const squareResizer = 10;
+    const layerSize = (size - (layers - i) * spacing) / 10;
+
     beginShape();
     vertex(
       getRandomValue(x - layerSize, variance),
@@ -42,11 +44,8 @@ function drawLayers(x, y, size, layers) {
 }
 
 function draw() {
-  background(255, 130, 90);
-  translate(
-    (width / 1.06375 - cols * size) / 2,
-    (height / 1.45 - rows * size) / 2
-  );
+  background(25, 2, 2);
+  translate((width - cols * size) / 2, (height - rows * size) / 2);
   stroke(255, 255, 255);
 
   for (let y = 0; y < rows; y++) {

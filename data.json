@@ -6,12 +6,27 @@
   },
   {
     "file": "experiments/georgNeesV2.js",
-    "name": "Schotter recreation variant 2",
+    "name": "Schotter recreation variant",
     "description": "Version of Georg Nees Schotter"
   },
   {
     "file": "experiments/georgNeesV3.js",
-    "name": "Schotter recreation variant 3",
+    "name": "Schotter recreation variant 2",
     "description": "Version of Georg Nees Schotter"
+  },
+  {
+    "file": "experiments/veraMolnar.js",
+    "name": "Vera Molnar recreation",
+    "description": "Recreation of Vera Molnars Structure de Quadrilateres"
+  },
+  {
+    "file": "experiments/veraMolnarV2.js",
+    "name": "Vera Molnar recreation variant",
+    "description": "Version of Vera Molnars Structure de Quadrilateres"
+  },
+  {
+    "file": "experiments/veraMolnarV3.js",
+    "name": "Vera Molnar recreation variant 2",
+    "description": "Version of Vera Molnars Structure de Quadrilateres"
   }
 ]

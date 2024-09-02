@@ -43,10 +43,7 @@ function drawLayers(x, y, size, layers) {
 }
 
 function draw() {
-  translate(
-    (width / 1.06375 - cols * size) / 2,
-    (height / 1.45 - rows * size) / 2
-  );
+  translate((width - cols * size) / 2, (height - rows * size) / 2);
   stroke(255, 255, 255);
 
   for (let y = 0; y < rows; y++) {

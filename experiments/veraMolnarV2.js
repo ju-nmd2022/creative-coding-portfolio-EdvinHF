@@ -1,6 +1,7 @@
 function setup() {
   createCanvas(800, 500);
   background(20, 20, 20);
+  frameRate(20);
 }
 // Based on Garrits code
 const size = 60;
@@ -15,8 +16,8 @@ function getRandomValue(pos, variance) {
 function drawLayers(x, y, size, layers) {
   const variance = size / 10;
   noFill();
-  strokeWeight(0.4);
-  const exLayers = layers * layers;
+  strokeWeight(0.1);
+  const exLayers = layers * layers * 0.5;
 
   for (let i = 0; i < exLayers; i++) {
     const spacing = 1;
@@ -43,10 +44,7 @@ function drawLayers(x, y, size, layers) {
 }
 
 function draw() {
-  translate(
-    (width / 1.06375 - cols * size) / 2,
-    (height / 1.45 - rows * size) / 2
-  );
+  translate((width - cols * size) / 2, (height - rows * size) / 2);
   stroke(255, 50, 50);
 
   for (let y = 0; y < rows; y++) {
