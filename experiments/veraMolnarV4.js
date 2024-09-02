@@ -77,8 +77,11 @@ function draw() {
     time += 0.04;
   } else {
     time -= 0.04;
-    time = max(time, 0);
     b += 3;
     r -= 3;
   }
+
+  b = constrain(b, 0, 255);
+  r = constrain(r, 0, 255);
+  time = max(time, 0);
 }
