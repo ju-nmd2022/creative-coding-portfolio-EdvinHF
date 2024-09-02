@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(800, 500);
+  createCanvas(innerWidth, innerHeight);
 }
 // Based on Garrits code
 const size = 60;

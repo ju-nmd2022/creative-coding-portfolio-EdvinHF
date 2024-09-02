@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(800, 500);
+  createCanvas(innerWidth, innerHeight);
   background(255, 130, 90);
 }
 // Based on Garrits code
