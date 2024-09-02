@@ -1,15 +1,10 @@
-let time = 0;
-
 function setup() {
   createCanvas(innerWidth, innerHeight);
 }
-
+// Based on Garrits code
 const size = 60;
 const cols = 9;
 const rows = 6;
-let r = 0;
-let g = 0;
-let b = 255;
 
 function getRandomValue(pos, variance) {
   return pos + map(Math.random(), 0, 1, -variance, variance);
@@ -48,37 +43,31 @@ function drawLayers(x, y, size, layers) {
 }
 
 function draw() {
-  background(2, 2, 202);
+  background(25, 2, 2);
   translate((width - cols * size) / 2, (height - rows * size) / 2);
-  stroke(r, g, b);
-  const gridX = (width - cols * size) / 2;
-  const gridY = (height - rows * size) / 2;
-  const gridWidth = cols * size;
-  const gridHeight = rows * size;
-  let breathing = map(sin(time), -1, 1, 0.5, 1.5);
+  stroke(255, 255, 255);
 
   for (let y = 0; y < rows; y++) {
     for (let col = 0; col < cols; col++) {
       let layers = (cols + 1) / 2 - Math.abs((cols - 1) / 2 - col);
-      let Nsize = size;
-      Nsize = size * breathing;
-      drawLayers(size / 2 + col * size, size / 2 + y * size, Nsize, layers);
+      drawLayers(
+        size / 2 + col * size,
+        size / 2 + y * size + layers * 30,
+        size,
+        layers
+      );
     }
   }
-
-  if (
-    mouseX > gridX &&
-    mouseX < gridX + gridWidth &&
-    mouseY > gridY &&
-    mouseY < gridY + gridHeight
-  ) {
-    b -= 3;
-    r += 3;
-    time += 0.04;
-  } else {
-    time -= 0.04;
-    time = max(time, 0);
-    b += 3;
-    r -= 3;
+  for (let col = 0; col < cols; col++) {
+    let numRowsInCol = col < cols / 2 ? col + 1 : cols - col;
+    for (let y = 0; y < numRowsInCol; y++) {
+      let layers = (cols + 1) / 2 - Math.abs((cols - 1) / 2 - col);
+      drawLayers(
+        size / 2 + col * size,
+        size / 2 + y * size - layers * 30,
+        size,
+        layers
+      );
+    }
   }
 }

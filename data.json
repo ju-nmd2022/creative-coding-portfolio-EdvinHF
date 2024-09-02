@@ -28,5 +28,10 @@
     "file": "experiments/veraMolnarV3.js",
     "name": "Vera Molnar recreation variant 2",
     "description": "Version of Vera Molnars Structure de Quadrilateres"
+  },
+  {
+    "file": "experiments/veraMolnarV4.js",
+    "name": "Interactive Vera Molnar recreation variant 2",
+    "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
   }
 ]
