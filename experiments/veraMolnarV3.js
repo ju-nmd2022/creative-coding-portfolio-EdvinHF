@@ -3,7 +3,6 @@ function setup() {
 }
 // Based on Garrits code
 const size = 60;
-//uneven number
 const cols = 9;
 const rows = 6;
 
@@ -53,5 +52,10 @@ function draw() {
       let layers = (cols + 1) / 2 - Math.abs((cols - 1) / 2 - col);
       drawLayers(size / 2 + col * size, size / 2 + y * size, size, layers);
     }
+  }
+}
+function keyPressed() {
+  if (key === "s" || key === "S") {
+    saveCanvas("myArtwork", "png");
   }
 }

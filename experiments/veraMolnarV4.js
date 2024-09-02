@@ -3,7 +3,6 @@ let time = 0;
 function setup() {
   createCanvas(innerWidth, innerHeight);
 }
-
 const size = 60;
 const cols = 9;
 const rows = 6;
@@ -76,12 +75,13 @@ function draw() {
     r += 3;
     time += 0.04;
   } else {
-    time -= 0.04;
+    time -= 0.09;
     b += 3;
     r -= 3;
   }
 
   b = constrain(b, 0, 255);
   r = constrain(r, 0, 255);
+  time = constrain(time, 0, 7);
   time = max(time, 0);
 }
