@@ -1,4 +1,4 @@
-import Particle from "./ball";
+import Particle from "./ball.js";
 let rows;
 let cols;
 let size = 50;
@@ -11,16 +11,18 @@ let increment = 0.1;
 let p;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(400, 400);
   background(255);
   cols = width / size;
   rows = height / size;
   angleMode(DEGREES);
-  p = new Particle(random(0, width), random(0, height));
+  p = new Particle(random(0, width),random(0, height));
+  
 }
 
 function draw() {
   background(200);
+  fill(255);
   xoff = 0;
   for (let i = 0; i < cols; i++) {
     arrows[i] = [];
@@ -39,4 +41,46 @@ function draw() {
     xoff += increment;
     zoff += increment / 70;
   }
+  p.checkEdges();
+  p.direction(arrows);
+  p.update();
+  p.display();
+  console.log();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
