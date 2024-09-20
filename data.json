@@ -1,11 +1,12 @@
 [
+  
   {
-    "file": "week4/veraMolnarV4Tone.js",
+    "file": "experiments/week2/flowfield.js",
     "name": "Interactive Vera Molnar recreation variant 2",
     "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
   },
   {
-    "file": "experiments/week2/flowfield.js",
+    "file": "week4/veraMolnarV4Tone.js",
     "name": "Interactive Vera Molnar recreation variant 2",
     "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
   },

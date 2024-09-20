@@ -3,6 +3,7 @@ let isPlaying = false;
 let initialized = false;
 let distortion;
 let reverb;
+let volume;
 const size = 60;
 const cols = 9;
 const rows = 6;
@@ -19,10 +20,10 @@ function setup() {
 function startAudio() {
   window.addEventListener("click", async () => {
     if (!initialized) {
+      
       distortion = new Tone.Distortion(0).toDestination();
       reverb = new Tone.Reverb(2).connect(distortion);
       synth = new Tone.PolySynth().connect(reverb);
-
       initialized = true;
     }
   });
@@ -85,7 +86,7 @@ function draw() {
   }
   if (initialized) {
     let distortionAmount = map(time, 0, 7, 0, 1);
-    let reverbAmount = map(breathing, -1, 1, 0, 1);
+    let reverbAmount = map(breathing, 0.5, 1.5, 0, 1);
     distortion.distortion = distortionAmount;
     reverb.reverb = reverbAmount;
   }
@@ -118,4 +119,5 @@ function draw() {
   r = constrain(r, 0, 255);
   time = constrain(time, 0, 7);
   time = max(time, 0);
+ 
 }
