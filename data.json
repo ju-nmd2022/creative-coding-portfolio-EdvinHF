@@ -1,5 +1,15 @@
 [
   {
+    "file": "week4/veraMolnarV4Tone.js",
+    "name": "Interactive Vera Molnar recreation variant 2",
+    "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
+  },
+  {
+    "file": "experiments/week2/flowfield.js",
+    "name": "Interactive Vera Molnar recreation variant 2",
+    "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
+  },
+  {
     "file": "experiments/week1/georgNees.js",
     "name": "Schotter recreation",
     "description": "recreation of of Georg Nees Schotter"
@@ -31,11 +41,6 @@
   },
   {
     "file": "experiments/week1/veraMolnarV4.js",
-    "name": "Interactive Vera Molnar recreation variant 2",
-    "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
-  },
-  {
-    "file": "experiments/week2/flowfield.js",
     "name": "Interactive Vera Molnar recreation variant 2",
     "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
   }
