@@ -1,6 +1,7 @@
+//not a submition code is based on this video https://www.youtube.com/watch?v=KOgRn2Brcdo and chatgpt.
 let rows;
 let cols;
-let size = 50;
+let size = 12.5;
 let xoff = 0;
 let yoff = 0;
 let zoff = 0;
@@ -8,7 +9,8 @@ let r = size / 2;
 let arrows = [];
 let increment = 0.2;
 let particles = [];
-let num = 1000;
+let num = 100000;
+let randomColor;
 
 class Particle {
   constructor(x, y) {
@@ -42,8 +44,18 @@ class Particle {
   display() {
     push();
     noStroke();
-    fill(0, 0, 0, 50);
-    ellipse(this.position.x, this.position.y, 2, 1);
+    randomColor = random(0,100);
+
+  if(randomColor > 50 ){
+
+    fill(210, 0, 0, 10);
+
+  }else{
+
+    fill(0, 0, 0, 10);
+
+  }
+    rect(this.position.x, this.position.y, 1, 3);
     pop();
   }
 
@@ -69,7 +81,7 @@ class Particle {
 
 function setup() {
   createCanvas(800, 800);
-  background(255, 255, 255);
+  background(250, 250, 247);
   cols = width / size;
   rows = height / size;
   angleMode(DEGREES);
