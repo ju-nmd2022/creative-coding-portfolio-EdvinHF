@@ -1,15 +1,4 @@
 [
-  
-  {
-    "file": "experiments/week2/flowfield.js",
-    "name": "Interactive Vera Molnar recreation variant 2",
-    "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
-  },
-  {
-    "file": "week4/veraMolnarV4Tone.js",
-    "name": "Interactive Vera Molnar recreation variant 2",
-    "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
-  },
   {
     "file": "experiments/week1/georgNees.js",
     "name": "Schotter recreation",
@@ -44,5 +33,21 @@
     "file": "experiments/week1/veraMolnarV4.js",
     "name": "Interactive Vera Molnar recreation variant 2",
     "description": "A interactive version of Vera Molnars Structure de Quadrilateres"
+  },
+  {
+    "file": "experiments/week2/flowfield.js",
+    "name": "Fish flow field",
+    "description": "A flow field created based on garrits example"
+  },
+  {
+    "file": "experiments/week2/flowfieldInteractive.js",
+    "name": "Piranha flow field  ",
+    "description": "A interactive version of Fish flow field"
+  },
+
+  {
+    "file": "week4/veraMolnarV4Tone.js",
+    "name": "Tonejs",
+    "description": "A version of previous work with tonejs added. CLICK to toggle sound"
   }
 ]

@@ -16,9 +16,15 @@ class Agent {
   follow(flow) {
     let desired = flow.copy();
     desired.setMag(this.maxSpeed);
-
     let steer = p5.Vector.sub(desired, this.velocity);
     steer.limit(this.maxForce * this.flowInfluence);
+    this.applyForce(steer);
+  }
+
+  seek(target) {
+    let desired = p5.Vector.sub(target, this.position);
+    let steer = p5.Vector.sub(desired, this.velocity);
+    steer.limit(this.maxForce);
     this.applyForce(steer);
   }
 
@@ -85,6 +91,7 @@ function setup() {
 function draw() {
   fill(5, 5, 100, 100);
   rect(0, 0, width, height);
+
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let xOffset = i * 0.1;
@@ -107,10 +114,20 @@ function draw() {
       let flow = field[xIndex][yIndex];
       agent.follow(flow);
     }
+
+    if (mouseIsPressed) {
+      let mousePos = createVector(mouseX, mouseY);
+      agent.seek(mousePos);
+    }
+
     agent.update();
     agent.handleEdges();
-    agent.render(agent.maxSpeed * 1.5);
-  }
 
+    if (mouseIsPressed) {
+      agent.render(random(1, 10));
+    } else {
+      agent.render(agent.maxSpeed * 1.5);
+    }
+  }
   zOffset += 0.02;
 }
