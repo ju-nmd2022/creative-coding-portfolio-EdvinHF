@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "p5.brush": "^1.1.2",
+    "spectral.js": "^2.0.2"
+  }
+}

@@ -124,7 +124,7 @@ function draw() {
     agent.handleEdges();
 
     if (mouseIsPressed) {
-      agent.render(random(1, 10));
+      agent.render(random(agent.maxSpeed, agent.maxSpeed * 3.5));
     } else {
       agent.render(agent.maxSpeed * 1.5);
     }

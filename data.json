@@ -46,7 +46,12 @@
   },
 
   {
-    "file": "week4/veraMolnarV4Tone.js",
+    "file": "experiments/week2/flowfieldai.js",
+    "name": "Nuclear winter",
+    "description": "A third iteration of the fish flowfield"
+  },
+  {
+    "file": "experiments/week4/veraMolnarV4Tone.js",
     "name": "Tonejs",
     "description": "A version of previous work with tonejs added. CLICK to toggle sound"
   }

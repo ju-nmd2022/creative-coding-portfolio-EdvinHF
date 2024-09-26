@@ -5,7 +5,6 @@ const nameText = document.getElementById("name");
 const descriptionText = document.getElementById("description");
 const backgroundText = document.getElementById("background");
 const p5container = document.getElementById("p5container");
-
 let currentExperiment = 0;
 let experiments = [];
 
