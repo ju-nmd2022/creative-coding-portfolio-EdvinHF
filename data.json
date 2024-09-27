@@ -51,8 +51,8 @@
     "description": "A third iteration of the fish flowfield"
   },
   {
-    "file": "experiments/week4/veraMolnarV4Tone.js",
-    "name": "Tonejs",
-    "description": "A version of previous work with tonejs added. CLICK to toggle sound"
+    "file": "experiments/week4/newtone.js",
+    "name": "LOWER YOUR VOLUME",
+    "description": "A version of previous work were i tried to match audio to the visual. CLICK to toggle sound"
   }
 ]
