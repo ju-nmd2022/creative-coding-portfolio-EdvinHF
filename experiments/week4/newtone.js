@@ -28,7 +28,8 @@ function setup() {
 function startAudio() {
   window.addEventListener("click", async () => {
     if (!initialized) {
-      distortion = new Tone.Distortion(0).toDestination();
+      vol = new Tone.Volume(-20).toDestination();
+      distortion = new Tone.Distortion(0).connect(vol);
       reverb = new Tone.Reverb().connect(distortion);
       synth = new Tone.PolySynth().connect(reverb);
       initialized = true;
@@ -42,7 +43,7 @@ function getRandomValue(pos, variance) {
 
 function drawLayers(x, y, size, layers) {
   const variance = size / 10;
-  noFill();
+
   strokeWeight(0.4);
   const exLayers = layers * layers;
 
@@ -81,6 +82,9 @@ function draw() {
   const gridWidth = cols * size;
   const gridHeight = rows * size;
   let breathing = map(sin(time), -1, 1, 0.5, 1.5);
+  //ChatGPT helped me with the logic behind mouse position/detection.
+  let colIndex = Math.floor((mouseX - gridX) / size);
+  let rowIndex = Math.floor((mouseY - gridY) / size);
 
   for (let y = 0; y < rows; y++) {
     let alpha = map(y, 0, rows - 1, 70, 255);
@@ -88,13 +92,21 @@ function draw() {
       mouseX > gridX &&
       mouseX < gridX + gridWidth &&
       mouseY > gridY &&
-      mouseY < gridY + gridHeight
+      mouseY < gridY + gridHeight &&
+      initialized
     ) {
       stroke(r, g, b, alpha);
     } else {
       stroke(r, g, b);
+      noFill();
     }
+
     for (let col = 0; col < cols; col++) {
+      if (y === rowIndex && col === colIndex && initialized) {
+        fill(2, 2, 242, 30);
+      } else {
+        noFill();
+      }
       let layers = (cols + 1) / 2 - Math.abs((cols - 1) / 2 - col);
       let Nsize = size;
       Nsize = size * breathing;
@@ -118,12 +130,6 @@ function draw() {
     b -= 3;
     r += 3;
     time += 0.04;
-
-    //ChatGPT helped me with the logic behind mouse position/detection.
-    let colIndex = Math.floor((mouseX - gridX) / size);
-    let rowIndex = Math.floor((mouseY - gridY) / size);
-    colIndex = constrain(colIndex, 0, cols - 1);
-    rowIndex = constrain(rowIndex, 0, rows - 1);
 
     let note = notesGrid[rowIndex][colIndex];
 
